@@ -4,16 +4,19 @@ Using LiuggioKnpMenuExtensionBundle
 Welcome to LiuggioKnpMenuExtension  - creating menus is VERY fun again!
 
 
-The objective of this bundle is to create (Knp)menu via the config file only
+The objective of this bundle is to create (Knp)menu via the config file only,
+
+using the Symfony2 event_dispatcher 
 
 **Concept**
 
 I had to develop a menu that would be extended and modified by other bundles.
 
-WOW I found the [stof](https://github.com/stof)'s idea
+WOW I found the [stof](https://github.com/stof)'s idea 
 
-so I implemented it :)
-adding few fixies.
+so I implemented it :) (adding few fixies)
+
+link to [stof's event idea](https://github.com/KnpLabs/KnpMenuBundle/pull/98).
 
 
 
