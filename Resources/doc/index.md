@@ -88,12 +88,10 @@ Image you want to create the Menu for the sidebar called SidebarMenu
 There are two step to follow the first is the menu creation
 the second is the menu content.
 
-First Step create a menu SidebarMenu
-
-put in your Resources/config/services.yml
+### Step A) First Step create a menu SidebarMenu
 
 ``` yaml
-
+# Resources/config/services.yml
     liuggio_knp_menu_extension.menu.main:
         class: Knp\Menu\MenuItem # the service definition requires setting the class
         factory_service: liuggio_knp_menu_extension.menu_builder
@@ -110,7 +108,7 @@ Now you created:
 
 -> an event called SidebarMenu_event
 
-The second is filling the menu you created
+### Step B) Fill the menu you created
 
 ``` yaml    
      liuggio_knp_menu_extension.menu_listener_sidebar: # first change the menu name
