@@ -14,16 +14,13 @@ I had to develop a menu that would be extended and modified by other bundles.
 
 WOW I found the [stof](https://github.com/stof)'s idea 
 
-so I implemented it :) (adding few fixies)
-
-link to [stof's event idea](https://github.com/KnpLabs/KnpMenuBundle/pull/98).
-
+so I implemented it :) (adding few fixies) link to [stof's event idea](https://github.com/KnpLabs/KnpMenuBundle/pull/98).
 
 
 **Basic Docs**
 
 * [Installation](#installation)
-* [Your first menu](#first-menu)
+* [Your first menu using YAML](#first-menu)
 
 <a name="installation"></a>
 
@@ -92,17 +89,15 @@ public function registerBundles()
 
 <a name="first-menu"></a>
 
-## Create your first menu only with config file!!!
+## Create your first menus using only the config yml
 
-Image you want to create the Menu for the sidebar called SidebarMenu
+If you wanted to create a menu called `SidebarMenu`
 
-There are two step to follow the first is the menu creation
-the second is the menu content.
+### Step A) First Step create a menu called `SidebarMenu`
 
-### Step A) First Step create a menu SidebarMenu
 
 ``` yaml
-# Resources/config/services.yml
+# MyPersonalBundle/Resources/config/services.yml
     liuggio_knp_menu_extension.menu.main:
         class: Knp\Menu\MenuItem # the service definition requires setting the class
         factory_service: liuggio_knp_menu_extension.menu_builder
@@ -113,15 +108,16 @@ the second is the menu content.
             - { name: knp_menu.menu, alias: SidebarMenu } # The alias is what is used to retrieve the menu
 ```
 
-Now you created:
+Now you just created:
 
--> a new menu called SidebarMenu
+1. a new menu called SidebarMenu
 
--> an event called SidebarMenu_event
+2. an event called SidebarMenu_event
 
-### Step B) Fill the menu you created
+### Step B) Fill the menu you created from any config file.
 
-``` yaml    
+``` yaml
+# AnotherPersonalBundle/Resources/config/services.yml
      liuggio_knp_menu_extension.menu_listener_sidebar: # first change the menu name
         class: Liuggio\KnpMenuDinamicBundle\EventsListener\ConfigureMenuListener
         tags:
