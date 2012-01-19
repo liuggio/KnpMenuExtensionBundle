@@ -3,10 +3,18 @@ Using LiuggioKnpMenuExtensionBundle
 
 Welcome to LiuggioKnpMenuExtension  - creating menus is VERY fun again!
 
+
+The objective of this bundle is to create (Knp)menu via the config file only
+
+**Concept**
+
 I had to develop a menu that would be extended and modified by other bundles.
-WOW I find the idea of the mythical 
-[stof](https://github.com/stof)
-so I implemented it.
+
+WOW I found the [stof](https://github.com/stof)'s idea
+
+so I implemented it :)
+adding few fixies.
+
 
 
 **Basic Docs**
