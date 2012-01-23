@@ -1,0 +1,4 @@
+services:
+    liuggio_knp_menu_extension.menu_builder:
+        class: Liuggio\KnpMenuExtensionBundle\Menu\MenuBuilder
+        arguments: ["@knp_menu.factory", "@event_dispatcher"]
