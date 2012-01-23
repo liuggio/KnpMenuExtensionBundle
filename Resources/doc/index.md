@@ -44,7 +44,7 @@ install`:
     git=https://github.com/KnpLabs/KnpMenuBundle.git
     target=bundles/Knp/Bundle/MenuBundle
 
-[liuggioKnpMenuExtensionBundle]
+[LiuggioKnpMenuExtensionBundle]
     git=https://github.com/liuggio/KnpMenuExtensionBundle
     target=bundles/Liuggio/KnpMenuExtensionBundle
 
@@ -93,12 +93,12 @@ public function registerBundles()
 
 If you wanted to create a menu called `SidebarMenu`
 
-### Step A) First Step create a menu called `SidebarMenu`
+### Step A) First Step create a new menu called `SidebarMenu`
 
 
 ``` yaml
 # MyPersonalBundle/Resources/config/services.yml
-    liuggio_knp_menu_extension.menu.main:
+    liuggio_knp_menu_extension.menu.sidebar: #if you want create a lot of menu change this line 
         class: Knp\Menu\MenuItem # the service definition requires setting the class
         factory_service: liuggio_knp_menu_extension.menu_builder
         factory_method: createMenu
@@ -107,6 +107,8 @@ If you wanted to create a menu called `SidebarMenu`
         tags:
             - { name: knp_menu.menu, alias: SidebarMenu } # The alias is what is used to retrieve the menu
 ```
+
+(you could create more than one menu)
 
 Now you just created:
 
@@ -130,7 +132,7 @@ Now you just created:
                       routeParameters: {'name': liuggio}
                   matches2: # name of the child (brother of matches1)
                       route: 'blog_show'
-              matches1: # this is the name of the node where to add the following children (so below matches2)
+              matches1: # this is the name of the node where you want add the following children (so below matches2)
                   matches1A:
                       route: 'homepage'
                       routeParameters: {'name': stof}
@@ -154,3 +156,9 @@ beneath it.
 {{ knp_menu_render(['SidebarMenu', 'matches1A']) }}
 
 ``` 
+
+
+### TODO
+
+1. add priority into events
+2. find a good way to test the service
