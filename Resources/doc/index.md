@@ -119,7 +119,7 @@ Now you just created:
 ``` yaml
 # AnotherPersonalBundle/Resources/config/services.yml
      liuggio_knp_menu_extension.menu_listener_sidebar: # first change the menu name
-        class: Liuggio\KnpMenuDinamicBundle\EventsListener\ConfigureMenuListener
+        class: Liuggio\KnpMenuExtensionBundle\EventsListener\ConfigureMenuListener
         tags:
           - { name: kernel.event_listener, event: 'SidebarMenu_event', method: onMenuConfigure } # second change the event created previously
         arguments:

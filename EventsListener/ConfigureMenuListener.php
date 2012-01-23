@@ -1,6 +1,7 @@
 <?php
 
 namespace Liuggio\KnpMenuExtensionBundle\EventsListener;
+
 use Knp\Menu\MenuItem;
 use Liuggio\KnpMenuExtensionBundle\Events\ConfigureMenuEvent;
 
