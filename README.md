@@ -12,5 +12,5 @@ using the Symfony2 event_dispatcher
 
 I had to develop a menu that would be extended and modified by other bundles.
 
-see doc [Resources/doc/index.md](https://github.com/liuggio/KnpMenuExtensionBundle/Resources/doc/index.md)
+see doc [Resources/doc/index.md](https://github.com/liuggio/KnpMenuExtensionBundle/blob/master/Resources/doc/index.md)
 
